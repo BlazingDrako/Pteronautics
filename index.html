@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pteronautics</title>
+<meta name="description" content="Pteronautics: free, open-source aerospace engineering in your browser. Atlas teaches the physics with a live visual for every concept; Works designs whole vehicles on the same validated solvers.">
+<meta name="author" content="Andrew Aguiar">
+<meta property="og:title" content="Pteronautics">
+<meta property="og:description" content="Learn the physics in Atlas. Design the vehicle in Works. Free aerospace engineering tools that run in your browser.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0d11" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f2f4f7" media="(prefers-color-scheme: light)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/pteronautics.css">
+<link rel="stylesheet" href="css/previews.css">
+<link rel="stylesheet" href="css/site.css">
+<script>try { var t = localStorage.getItem('pteronautics-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) { }</script>
+</head>
+<body class="site">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="s-nav" id="top">
+  <div class="s-wrap s-nav-in">
+    <a class="brand" href="#top" aria-label="Pteronautics, top of the page"><span class="brand-mark" data-brand></span><span class="brand-name">Pteronautics</span></a>
+    <nav class="s-links" aria-label="Sections">
+      <a href="#programs">Programs</a><a href="#atlas">Atlas</a><a href="#works">Works</a><a href="#core">Solver core</a><a href="#open">Open source</a>
+    </nav>
+    <span class="grow"></span>
+    <button class="btn small s-theme" type="button" data-theme-btn aria-label="Switch theme"></button>
+    <a class="btn small s-hide-sm" href="../pteronautics-atlas/">Atlas</a>
+    <a class="btn small primary" href="../pteronautics-works/app/">Works</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- hero -->
+  <section class="s-hero">
+    <div class="s-wrap s-hero-in">
+      <div class="s-hero-copy">
+        <p class="s-eyebrow">Free · open source · runs in your browser</p>
+        <h1>Aerospace engineering, <span class="accent">from first principles to a whole vehicle.</span></h1>
+        <p class="s-lede">Pteronautics is a family of aerospace programs built on one validated solver core. <b>Atlas</b> teaches the physics with a live visual for every concept. <b>Works</b> puts the same solvers to work designing whole vehicles.</p>
+        <div class="s-cta">
+          <a class="btn big s-cta-atlas" href="../pteronautics-atlas/"><span class="s-cta-k">Learn</span>Open Atlas <span aria-hidden="true">→</span></a>
+          <a class="btn primary big" href="../pteronautics-works/app/#/v/kestrel"><span class="s-cta-k">Design</span>Open Works <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="s-fine">No install and no account. Nothing you make leaves your browser unless you save it.</p>
+      </div>
+      <figure class="s-hero-stage">
+        <div class="s-hero-3d" data-hero3d aria-label="Kestrel, a sample aircraft from Works, in 3D"></div>
+        <div class="s-hero-chips" data-hero-chips aria-live="polite"></div>
+        <div class="s-hero-atlas" data-hero-atlas aria-hidden="true"></div>
+        <figcaption data-hero-caption>Kestrel, the sample aircraft in Works, solved live on this page. Drag to turn it.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- the two programs -->
+  <section class="s-sec" id="programs">
+    <div class="s-wrap">
+      <div class="s-head">
+        <p class="s-eyebrow">Two programs, one core</p>
+        <h2>Learn it in Atlas. Use it in Works.</h2>
+        <p>Both programs run the same solvers, checked against textbooks, published data and reference codes. Atlas opens each one up so you can see how it behaves. Works couples them around a vehicle so a single edit flows through the whole design.</p>
+      </div>
+      <div class="s-programs">
+        <article class="s-prog pnl">
+          <div class="s-prog-head"><span class="s-prog-tag">Pteronautics Atlas</span><span class="tag live">ready</span></div>
+          <h3>Aerospace engineering you can see.</h3>
+          <p>Fourteen interactive tools across aerodynamics, propulsion, structures, flight and orbits. Every result comes with a picture: watch pressure build on a wing, the boundary layer separate, shocks form and engines breathe.</p>
+          <ul class="s-list">
+            <li>An XFOIL-class airfoil solver, vortex-lattice wings, a GPU flow sandbox</li>
+            <li>Shocks, nozzles, jet and rocket engines, heat transfer, rotors</li>
+            <li>Frames and FEA, flight performance and stability, orbits and GNC</li>
+          </ul>
+          <div class="s-prog-foot"><a class="btn" href="../pteronautics-atlas/">Open Atlas →</a><a class="s-link" href="#atlas">See the tools</a></div>
+        </article>
+        <article class="s-prog pnl on">
+          <div class="s-prog-head"><span class="s-prog-tag">Pteronautics Works</span><span class="tag accent">first slice</span></div>
+          <h3>Design the whole vehicle. Every analysis follows.</h3>
+          <p>A design program built around a vehicle. Change the wing and the aerodynamics, mass and balance, stability, performance and requirements recompute together, through a coupling graph that shows what is current and what is stale.</p>
+          <ul class="s-list">
+            <li>Systems tree, a 3D view and a to-scale top view with lift and the CG</li>
+            <li>Fidelity you choose: lifting line, vortex lattice, viscous section polars</li>
+            <li>Requirements with live margins; vehicles saved as plain <code>.json</code></li>
+          </ul>
+          <div class="s-prog-foot"><a class="btn primary" href="../pteronautics-works/app/">Open Works →</a><a class="s-link" href="#works">See how it works</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atlas tools -->
+  <section class="s-sec s-alt" id="atlas">
+    <div class="s-wrap">
+      <div class="s-head">
+        <p class="s-eyebrow">Pteronautics Atlas</p>
+        <h2>A visual for every concept.</h2>
+        <p>Each tool opens on its own page in Atlas. Hover a card to see it move.</p>
+      </div>
+      <div class="s-groups" data-atlas-tools></div>
+    </div>
+  </section>
+
+  <!-- Works demo -->
+  <section class="s-sec" id="works">
+    <div class="s-wrap">
+      <div class="s-head">
+        <p class="s-eyebrow">Pteronautics Works</p>
+        <h2>One edit. Every analysis follows.</h2>
+        <p>Each analysis in Works declares what it reads from the vehicle and which results it needs. An edit marks only what depends on it as stale, and the coupling graph reruns those, in order. These sliders drive the real graph.</p>
+      </div>
+      <div class="s-demo" data-demo>
+        <div class="s-demo-ctl pnl pnl-pad" data-demo-controls></div>
+        <div class="s-demo-view pnl" data-demo-view></div>
+        <div class="s-demo-graph pnl pnl-pad">
+          <div class="sec-row"><span class="sec">Coupling graph</span><span data-demo-graph-head></span></div>
+          <div data-demo-graph></div>
+        </div>
+      </div>
+      <div class="s-demo-stats" data-demo-stats></div>
+    </div>
+  </section>
+
+  <!-- shared core, shown through the airfoil solver -->
+  <section class="s-sec s-alt" id="core">
+    <div class="s-wrap s-split">
+      <div class="s-split-copy">
+        <p class="s-eyebrow">One solver core</p>
+        <h2>The same physics, from the lesson to the design.</h2>
+        <p>The airfoil solver you learn with in Atlas's Airfoil Lab is the one Works runs at every station of a wing. Here it is on Kestrel's wing at mid-semispan: the pressure on both surfaces and the boundary layer, laminar into a separation bubble, then turbulent to the trailing edge.</p>
+        <div class="s-points">
+          <div><b>Checked against references</b><span>Closed-form results, textbook tables, published data and reference codes. <a href="https://github.com/BlazingDrako/pteronautics-atlas/blob/main/docs/validation.md">How Atlas is validated</a>.</span></div>
+          <div><b>Tested in the open</b><span>Both programs ship their test pages: <a href="../pteronautics-atlas/tests/">Atlas</a> and <a href="../pteronautics-works/tests/">Works</a> run every check in your browser.</span></div>
+        </div>
+        <p class="s-fine" data-lab-caption>Solving NACA 4415 at Kestrel's mid-semispan…</p>
+      </div>
+      <div class="s-split-vis">
+        <div class="plot-card" data-lab-cp><h4>Pressure and boundary layer</h4><div class="s-ph">Solving…</div></div>
+        <div class="plot-card" data-lab-bl><h4>Boundary layer on the section</h4><div class="s-ph">Solving…</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- open source -->
+  <section class="s-sec" id="open">
+    <div class="s-wrap">
+      <div class="s-head">
+        <p class="s-eyebrow">Open source</p>
+        <h2>Yours to use, study, share and change.</h2>
+        <p>Pteronautics is free software under the GNU General Public License v3.0. Plain JavaScript modules, no build step and nothing to install: open the pages, or run them offline with a tiny local server.</p>
+      </div>
+      <div class="s-repos">
+        <a class="s-repo pnl" href="https://github.com/BlazingDrako/pteronautics-atlas"><b>pteronautics-atlas</b><span>The interactive tools, the solver core and its validation suite.</span><span class="go">Source on GitHub →</span></a>
+        <a class="s-repo pnl" href="https://github.com/BlazingDrako/pteronautics-works"><b>pteronautics-works</b><span>The vehicle model, coupling engine, analyses and workspace, on a recorded snapshot of the Atlas core.</span><span class="go">Source on GitHub →</span></a>
+        <a class="s-repo pnl" href="https://github.com/BlazingDrako/pteronautics"><b>pteronautics</b><span>This site. It loads its live figures straight from Atlas and Works.</span><span class="go">Source on GitHub →</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="s-foot">
+  <div class="s-wrap s-foot-in">
+    <span class="brand"><span class="brand-mark" data-brand></span><span class="brand-name">Pteronautics</span></span>
+    <span class="muted">Copyright © 2026 Andrew Aguiar · <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a> · airfoil solver ported from mfoil (MIT)</span>
+    <span class="grow"></span>
+    <a href="../pteronautics-atlas/">Atlas</a><a href="../pteronautics-works/app/">Works</a><a href="https://github.com/BlazingDrako/pteronautics">Source</a>
+  </div>
+</footer>
+<noscript><p class="s-wrap">The live figures on this page need JavaScript. The links to Atlas and Works work without it.</p></noscript>
+<script type="module" src="js/site.js"></script>
+</body>
+</html>
