@@ -160,7 +160,7 @@ loadWorks().then(W => {
         r.addEventListener('input', () => { fill(); edit(sl.path, +r.value); note.textContent = sl.note; });
         sl.sync();
         return h('label', { class: 's-slider' }, h('span', {}, sl.label, out), r);
-      }), note, h('a', { class: 's-link', href: WORKS + 'app/#/v/kestrel' }, 'Open Kestrel in Works →'));
+      }), note, h('a', { class: 's-link', href: WORKS + '#/v/kestrel' }, 'Open Kestrel in Works →'));
     const paintGraph = () => { const sm = W.graphSummary(graph); ghead.className = sm.cls; ghead.textContent = sm.text; gbox.replaceChildren(W.graphSvg(graph)); };
     const paintView = () => { try { view.replaceChildren(W.vehicleView(doc, outputsOf(graph), { clmap: true, load: true, mac: false, cg: true, items: false }, { w: view.clientWidth || 520, h: view.clientHeight || 420 }).svg); } catch { } };
     const paintStats = () => {
@@ -204,9 +204,9 @@ loadWorks().then(W => {
 }).catch(err => {
   // Works could not be loaded: keep the page whole, with the links
   console.warn('Pteronautics: the live figures from Works are unavailable', err);
-  $('[data-hero3d]').replaceChildren(h('div', { class: 's-hero-off' }, h('span', { 'data-brand': '', class: 'brand-mark big', html: BRAND_SVG }), h('p', {}, 'The live 3D view loads from Works.'), h('a', { class: 'btn', href: WORKS + 'app/' }, 'Open Works →')));
+  $('[data-hero3d]').replaceChildren(h('div', { class: 's-hero-off' }, h('span', { 'data-brand': '', class: 'brand-mark big', html: BRAND_SVG }), h('p', {}, 'The live 3D view loads from Works.'), h('a', { class: 'btn', href: WORKS + '' }, 'Open Works →')));
   $('[data-hero-caption]').textContent = 'Kestrel, the sample aircraft in Works.';
-  $('[data-demo]').replaceChildren(h('div', { class: 's-ph wide' }, 'The interactive demo loads from Works, which could not be reached just now. ', h('a', { href: WORKS + 'app/#/v/kestrel' }, 'Open Kestrel in Works →')));
+  $('[data-demo]').replaceChildren(h('div', { class: 's-ph wide' }, 'The interactive demo loads from Works, which could not be reached just now. ', h('a', { href: WORKS + '#/v/kestrel' }, 'Open Kestrel in Works →')));
   fallback($('[data-lab-cp]'), 'The airfoil solver loads from Works.'); fallback($('[data-lab-bl]'), 'Not available just now.');
   $('[data-lab-caption]').textContent = '';
 });

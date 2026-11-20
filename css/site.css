@@ -31,9 +31,8 @@ body.site { font-size: 15px; line-height: 1.55; background: var(--bg); overflow-
 .s-lede { font-size: 17.5px; color: var(--text-2); max-width: 34em; margin: 0 0 26px; }
 .s-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
 .s-fine { font-size: 13px; color: var(--text-3); margin: 0; }
-.s-hero-stage { position: relative; margin: 0; height: 520px; border-radius: 20px; border: 1px solid var(--border); background-color: var(--stage); overflow: hidden; box-shadow: var(--shadow-lg);
-  background-image: linear-gradient(color-mix(in srgb, var(--border) 50%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--border) 50%, transparent) 1px, transparent 1px); background-size: 28px 28px; }
-:root[data-resolved-theme="dark"] .s-hero-stage { background-image: linear-gradient(#12161e 1px, transparent 1px), linear-gradient(90deg, #12161e 1px, transparent 1px); }
+.s-hero-stage { position: relative; margin: 0; height: 520px; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow-lg);
+  background: radial-gradient(ellipse 75% 65% at 50% 45%, var(--glow), transparent 72%), var(--stage); }   /* no graph paper: the 3D ground grid is the only grid */
 .s-hero-3d { position: absolute; inset: 72px 0 46px 0; }
 .s-hero-chips { position: absolute; left: 16px; top: 16px; display: flex; flex-wrap: wrap; gap: 8px; max-width: calc(100% - 32px); pointer-events: none; }
 .s-chip { display: flex; flex-direction: column; padding: 7px 12px; border-radius: 10px; background: color-mix(in srgb, var(--bg-elev) 86%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid var(--border); box-shadow: var(--shadow); }
